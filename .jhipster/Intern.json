@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20220721093953",
+  "clientRootFolder": "testMs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "intern",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "internId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dob",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "school",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "department",
+      "fieldType": "Company",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "STSL (SYSTEM_SPECS_LIMITED),RPSL (REMITA_PAYMENT_SERVICE_LIMITED),SYSTEMSPECS (SYSTEM_SPECS)"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "testMs",
+  "name": "Intern",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "progressReport",
+      "otherEntityRelationshipName": "intern",
+      "relationshipName": "progressReport",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,35 @@
+entity Intern {
+	firstName String required,
+    internId String required unique,
+    lastName String required,
+    phoneNumber String required,
+    dob String required,
+    phoneNumber String required,
+    school String required,
+    department Company required,
+}
+
+entity ProgressReport {
+	date String required,
+    status String,
+    remarks String,
+}
+
+enum Company {
+    STSL("SYSTEM_SPECS_LIMITED"),
+    RPSL("REMITA_PAYMENT_SERVICE_LIMITED"),
+    SYSTEMSPECS("SYSTEM_SPECS")
+}
+
+enum Status {
+	ACTIVE,
+    INACTIVE
+}
+
+relationship OneToMany {
+	Intern to ProgressReport
+}
+
+dto * with mapstruct
+
+

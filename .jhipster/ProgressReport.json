@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20220721093954",
+  "clientRootFolder": "testMs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "progress_report",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remarks",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "testMs",
+  "name": "ProgressReport",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "intern",
+      "otherEntityRelationshipName": "progressReport",
+      "relationshipName": "intern",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
